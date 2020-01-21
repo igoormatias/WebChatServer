@@ -48,7 +48,7 @@ io.on('connection', (socket) => {
        const user = removeUser(socket.id)
        
        if (user) {
-           io.to(user.room).emit('message', { user: 'admin', text: `${user.name.charAt(0).toUpperCase + user.name.slice(1)} acabou de sair`})
+           io.to(user.room).emit('message', { user: 'admin', text: `${user.name.charAt(0).toUpperCase() + user.name.slice(1)} acabou de sair`})
        }
     })
 });
